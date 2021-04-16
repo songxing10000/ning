@@ -23,6 +23,7 @@
 		8E919DA12535616D00E34D28 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DA02535616D00E34D28 /* KingfisherExtension.swift */; };
 		8E919DC325357AF400E34D28 /* OauthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DC225357AF400E34D28 /* OauthInfo.swift */; };
 		8E919DC72535F06500E34D28 /* UploadApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DC62535F06500E34D28 /* UploadApi.swift */; };
+		98F0D95C26295F33003BB127 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F0D95B26295F33003BB127 /* Launch Screen.storyboard */; };
 		DA0C169B25088F8F0000DF1E /* ArticleDetailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C169A25088F8F0000DF1E /* ArticleDetailHelper.swift */; };
 		DA0C169D2508C6470000DF1E /* ArticleDetailOpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C169C2508C6470000DF1E /* ArticleDetailOpHandler.swift */; };
 		DA0C169F25091A710000DF1E /* NingGroupItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C169E25091A710000DF1E /* NingGroupItemCell.swift */; };
@@ -42,7 +43,6 @@
 		DA2C32A224FE469F00F66229 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C32A124FE469F00F66229 /* ViewController.swift */; };
 		DA2C32A524FE469F00F66229 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2C32A324FE469F00F66229 /* Main.storyboard */; };
 		DA2C32A724FE46A600F66229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2C32A624FE46A600F66229 /* Assets.xcassets */; };
-		DA2C32AA24FE46A600F66229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2C32A824FE46A600F66229 /* LaunchScreen.storyboard */; };
 		DA2F3FE9251065920074E233 /* UserNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F3FE8251065920074E233 /* UserNameView.swift */; };
 		DA2F3FEB251068090074E233 /* UserPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F3FEA251068090074E233 /* UserPasswordView.swift */; };
 		DA2F3FED251079730074E233 /* GroupApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F3FEC251079730074E233 /* GroupApi.swift */; };
@@ -182,6 +182,7 @@
 		8E919DA02535616D00E34D28 /* KingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		8E919DC225357AF400E34D28 /* OauthInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthInfo.swift; sourceTree = "<group>"; };
 		8E919DC62535F06500E34D28 /* UploadApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadApi.swift; sourceTree = "<group>"; };
+		98F0D95B26295F33003BB127 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B18DB2E9725BC2FED1413BD1 /* Pods-ning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ning.release.xcconfig"; path = "Target Support Files/Pods-ning/Pods-ning.release.xcconfig"; sourceTree = "<group>"; };
 		BFE20B0CAFE53B3F05BAF724 /* Pods_ning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0C169A25088F8F0000DF1E /* ArticleDetailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailHelper.swift; sourceTree = "<group>"; };
@@ -204,7 +205,6 @@
 		DA2C32A124FE469F00F66229 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA2C32A424FE469F00F66229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA2C32A624FE46A600F66229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DA2C32A924FE46A600F66229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA2C32AB24FE46A600F66229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA2F3FE8251065920074E233 /* UserNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameView.swift; sourceTree = "<group>"; };
 		DA2F3FEA251068090074E233 /* UserPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPasswordView.swift; sourceTree = "<group>"; };
@@ -419,7 +419,7 @@
 				DA2C32A124FE469F00F66229 /* ViewController.swift */,
 				DA2C32A324FE469F00F66229 /* Main.storyboard */,
 				DA2C32A624FE46A600F66229 /* Assets.xcassets */,
-				DA2C32A824FE46A600F66229 /* LaunchScreen.storyboard */,
+				98F0D95B26295F33003BB127 /* Launch Screen.storyboard */,
 				DA2C32AB24FE46A600F66229 /* Info.plist */,
 				DA789CF624FE88AF00CB27CE /* NingGlobal.swift */,
 				DA2F854B2518AFDB00035C83 /* ning-Bridging-Header.h */,
@@ -849,12 +849,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2C32AA24FE46A600F66229 /* LaunchScreen.storyboard in Resources */,
 				DA4D70DC2503CE1800F9F477 /* detail.html in Resources */,
 				8E211109256A836900CC9FC9 /* abs_image.png in Resources */,
 				8E211100256A832D00CC9FC9 /* abs_image_no.png in Resources */,
 				DA2C32A724FE46A600F66229 /* Assets.xcassets in Resources */,
 				DA2C32A524FE469F00F66229 /* Main.storyboard in Resources */,
+				98F0D95C26295F33003BB127 /* Launch Screen.storyboard in Resources */,
 				8E1AD41C2561738B007CE01C /* member.png in Resources */,
 				DA4D707A2503CE1800F9F477 /* member.html in Resources */,
 				DA4D70DB2503CE1800F9F477 /* default.css in Resources */,
@@ -1085,14 +1085,6 @@
 				DA2C32A424FE469F00F66229 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DA2C32A824FE46A600F66229 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA2C32A924FE46A600F66229 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
