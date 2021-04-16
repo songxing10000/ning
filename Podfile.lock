@@ -1,0 +1,155 @@
+PODS:
+  - Alamofire (4.9.1)
+  - ALCameraViewController (3.1)
+  - DragAndDropTableView (0.1.11)
+  - DropDown (2.3.13)
+  - DynamicBlurView (5.0.3)
+  - EmptyDataSet-Swift (5.0.0)
+  - HandyJSON (5.0.2)
+  - HMSegmentedControl (1.5.6)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JXSegmentedView (1.2.7)
+  - Kingfisher (4.10.1)
+  - LSDialogViewController (4.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - PMAlertController (4.0.1)
+  - Result (4.1.0)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+  - SnapKit (4.2.0)
+  - SnapKitExtend (1.1.0):
+    - SnapKit
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftyStoreKit (0.16.1)
+  - TextFieldEffects (1.6.0)
+  - Then (2.7.0)
+  - Toast-Swift (5.0.1)
+  - UINavigation-SXFixSpace (1.2.4)
+  - UMCCommon (7.1.1)
+  - UMCErrorCatch (1.0.0):
+    - UMCCommon
+  - UMCShare/Core (6.9.9):
+    - UMCCommon
+  - UMCShare/Social/ReducedQQ (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/UI (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+
+DEPENDENCIES:
+  - Alamofire (= 4.9.1)
+  - ALCameraViewController
+  - DragAndDropTableView (~> 0.1)
+  - DropDown
+  - DynamicBlurView
+  - EmptyDataSet-Swift
+  - HandyJSON
+  - HMSegmentedControl
+  - IQKeyboardManagerSwift
+  - JXSegmentedView
+  - Kingfisher (= 4.10.1)
+  - LSDialogViewController (~> 4.0)
+  - MBProgressHUD
+  - MJRefresh
+  - Moya (= 13.0.1)
+  - PMAlertController
+  - Reusable
+  - SnapKit (= 4.2.0)
+  - SnapKitExtend
+  - SQLite.swift
+  - SwiftyStoreKit
+  - TextFieldEffects
+  - Then
+  - Toast-Swift (~> 5.0.1)
+  - UINavigation-SXFixSpace
+  - UMCCommon (= 7.1.1)
+  - UMCErrorCatch
+  - UMCShare/Social/ReducedQQ (= 6.9.9)
+  - UMCShare/Social/ReducedSina (= 6.9.9)
+  - UMCShare/Social/ReducedWeChat (= 6.9.9)
+  - UMCShare/UI (= 6.9.9)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ALCameraViewController
+    - DragAndDropTableView
+    - DropDown
+    - DynamicBlurView
+    - EmptyDataSet-Swift
+    - HandyJSON
+    - HMSegmentedControl
+    - IQKeyboardManagerSwift
+    - JXSegmentedView
+    - Kingfisher
+    - LSDialogViewController
+    - MBProgressHUD
+    - MJRefresh
+    - Moya
+    - PMAlertController
+    - Result
+    - Reusable
+    - SnapKit
+    - SnapKitExtend
+    - SQLite.swift
+    - SwiftyStoreKit
+    - TextFieldEffects
+    - Then
+    - Toast-Swift
+    - UINavigation-SXFixSpace
+    - UMCCommon
+    - UMCErrorCatch
+    - UMCShare
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ALCameraViewController: 144dea45fd749a623aafd8cb7b10cea88499fcc3
+  DragAndDropTableView: 678794837f820318acb3dc9edf513b7c86daa44f
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  DynamicBlurView: b57e2f6aa33f85b2bcca272265162a3c7c5cc499
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  HMSegmentedControl: 34c1f54d822d8308e7b24f5d901ec674dfa31352
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JXSegmentedView: eb1cad21f57c2543c00c3e08b8fd3c7ca54f5acd
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  LSDialogViewController: ab7dd9a3e3facf95b386b7209401ac96bbdc3514
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  PMAlertController: ab5fcf4d085b7878c9451466d701449c4bf6efb8
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SnapKitExtend: aa30cf37196195fae9c4354686cc7710184ebfcc
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
+  UMCCommon: f455f92c125342e360d6ad9eafe484945351eeb5
+  UMCErrorCatch: 51f1b68f920233e90a3fa6d51f0456174507ec78
+  UMCShare: 52d9ee35f61c51eda3089a7961e1d04ce57b9d6a
+
+PODFILE CHECKSUM: ec5bc417cdbb1253fd25f4f2d28c12d9c42dd64b
+
+COCOAPODS: 1.10.1
