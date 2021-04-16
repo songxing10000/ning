@@ -1,0 +1,9 @@
+.DS_Store
+
+Checkouts/
+xcuserdata/
+DerivedData/
+
+contents.xcworkspacedata
+project.xcworkspace/contents.xcworkspacedata
+*.ipa
