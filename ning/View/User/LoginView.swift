@@ -56,23 +56,6 @@ class LoginView: BaseView {
         view.backgroundColor = UIColor.lightGray
         return view
     }()
-    
-    lazy var thirdTipText : UILabel = {
-        let view = UILabel()
-        view.text = "其他方式登录"
-        view.textColor = UIColor.lightGray
-        view.font = UIFont.systemFont(ofSize: 14)
-        view.textAlignment = .center
-        return view
-    }()
-    
-    lazy var weixinView: UIButton = {
-        let view = UIButton()
-        view.setTitle("使用微信登录", for: .normal)
-        view.backgroundColor = UIColor.weixin
-        view.titleLabel?.textColor = UIColor.white
-        return view
-    }()
 
     override func setupUI() {
         let fieldWidth = 30
@@ -114,39 +97,7 @@ class LoginView: BaseView {
             make.width.equalTo(300)
         }
         
-        thirdTipView.addSubview(thirdTipLeftLine)
-        thirdTipLeftLine.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(0)
-            make.height.equalTo(1)
-            make.width.equalTo(90)
-            make.centerY.equalToSuperview()
-        }
-        
-        thirdTipView.addSubview(thirdTipText)
-        thirdTipText.snp.makeConstraints { (make) in
-            make.left.equalTo(thirdTipLeftLine.snp.right)
-            make.width.equalTo(120)
-            make.height.equalTo(15)
-            make.centerY.equalToSuperview()
-        }
-        
-        thirdTipView.addSubview(thirdTipRightLine)
-        thirdTipRightLine.snp.makeConstraints { (make) in
-            make.left.equalTo(thirdTipText.snp.right)
-            make.centerY.equalToSuperview()
-            make.height.equalTo(1)
-            make.width.equalTo(90)
-        }
-        
-        addSubview(weixinView)
-        weixinView.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(fieldWidth)
-            make.right.equalToSuperview().offset(-fieldWidth)
-            make.height.equalTo(fieldHeight)
-            make.top.equalTo(thirdTipView.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
-        }
-        
+       
     }
     
     
