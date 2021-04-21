@@ -15,8 +15,8 @@ class UserInfoController: BaseViewController {
                 [["name":"member", "title": "会员"]],
                 
                 [["name":"name", "title": "用户名"],
-                 ["name":"email", "title": "邮箱"],["name":"pass", "title": "密码"]],
-        [["name":"weixin", "title": "微信"],]]
+                 ["name":"email", "title": "邮箱"],
+                 ["name":"pass", "title": "密码"]]]
     }()
     
     private lazy var sectionArray2: Array = {
@@ -99,56 +99,6 @@ class UserInfoController: BaseViewController {
         tableView.reloadData()
     }
     
-    private func clickWeixin() {
-        guard let user = DAOFactory.getLoginUser() else {return}
-        if user.weixin_name == nil || user.weixin_name!.isEmpty {
-            clickBindWeixin()
-        } else {
-            if user.email != nil && !user.email!.isEmpty {
-                clickCancelBindWeixin()
-            }
-        }
-    }
-    
-    private func clickCancelBindWeixin() {
-        showConfirmAlert("确定要取消关联微信吗？") {
-            UserApiLoadingProvider.request(UserApi.cancelSocial(type: OAUTH_TYPE_WEIXIN),
-                model: UserWrapper.self) { [weak self] (returnData) in
-                self?.postBind(returnData)
-            }
-        }
-    }
-    
-    private func clickBindWeixin() {
-        if UIApplication.shared.canOpenURL(URL(string: "weixin://")!) == false {
-            showToast("设备未安装微信")
-            return
-        }
-        UMSocialManager.default().getUserInfo(with: UMSocialPlatformType.wechatSession, currentViewController: nil) { [weak self] (result, error) in
-            if error == nil {
-                let resp = result as! UMSocialUserInfoResponse
-                self?.handleBindWeixin(resp)
-            } else { // 授权失败
-                logError(error)
-                self?.showToast("调起微信授权失败")
-            }
-        }
-    }
-    
-    private func handleBindWeixin(_ resp: UMSocialUserInfoResponse) {
-        let oauth = OauthInfo()
-        oauth.uid = resp.openid
-        oauth.unionId = resp.unionId
-        oauth.name = resp.name
-        oauth.profile = resp.iconurl
-        oauth.type = OAUTH_TYPE_WEIXIN
-        oauth.token = resp.accessToken
-        logInfo(oauth)
-        UserApiLoadingProvider.request(UserApi.bindSocial(auth: oauth),
-            model: UserWrapper.self) { [weak self] (returnData) in
-            self?.postBind(returnData)
-        }
-    }
     
     func postBind(_ result: UserWrapper?){
         if !showErrorResultAlert(result) {
@@ -257,8 +207,6 @@ extension UserInfoController: UITableViewDelegate, UITableViewDataSource {
             pushViewController(UserEmailController())
         case "member":
             pushViewController(MemberController())
-        case "weixin":
-            clickWeixin()
         default:
             break
         }

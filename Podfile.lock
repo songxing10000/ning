@@ -36,23 +36,6 @@ PODS:
   - Then (2.7.0)
   - Toast-Swift (5.0.1)
   - UINavigation-SXFixSpace (1.2.4)
-  - UMCCommon (7.1.1)
-  - UMCErrorCatch (1.0.0):
-    - UMCCommon
-  - UMCShare/Core (6.9.9):
-    - UMCCommon
-  - UMCShare/Social/ReducedQQ (6.9.9):
-    - UMCCommon
-    - UMCShare/Core
-  - UMCShare/Social/ReducedSina (6.9.9):
-    - UMCCommon
-    - UMCShare/Core
-  - UMCShare/Social/ReducedWeChat (6.9.9):
-    - UMCCommon
-    - UMCShare/Core
-  - UMCShare/UI (6.9.9):
-    - UMCCommon
-    - UMCShare/Core
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
@@ -80,12 +63,6 @@ DEPENDENCIES:
   - Then
   - Toast-Swift (~> 5.0.1)
   - UINavigation-SXFixSpace
-  - UMCCommon (= 7.1.1)
-  - UMCErrorCatch
-  - UMCShare/Social/ReducedQQ (= 6.9.9)
-  - UMCShare/Social/ReducedSina (= 6.9.9)
-  - UMCShare/Social/ReducedWeChat (= 6.9.9)
-  - UMCShare/UI (= 6.9.9)
 
 SPEC REPOS:
   trunk:
@@ -115,9 +92,6 @@ SPEC REPOS:
     - Then
     - Toast-Swift
     - UINavigation-SXFixSpace
-    - UMCCommon
-    - UMCErrorCatch
-    - UMCShare
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -146,10 +120,7 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
-  UMCCommon: f455f92c125342e360d6ad9eafe484945351eeb5
-  UMCErrorCatch: 51f1b68f920233e90a3fa6d51f0456174507ec78
-  UMCShare: 52d9ee35f61c51eda3089a7961e1d04ce57b9d6a
 
-PODFILE CHECKSUM: ec5bc417cdbb1253fd25f4f2d28c12d9c42dd64b
+PODFILE CHECKSUM: 9d990b108b05b756927dee054fa1b05aacb10f07
 
 COCOAPODS: 1.10.1

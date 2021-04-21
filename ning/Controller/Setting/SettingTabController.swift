@@ -12,10 +12,7 @@ class SettingTabController: BaseViewController {
     
     private lazy var sectionArray: Array = {
         return [[["name":"fav", "title": "我的收藏"],
-                 ["name":"late", "title": "我的待读"]],
-                
-                [
-                 ["name":"about", "title": "关于我们"]]]
+                 ["name":"late", "title": "我的待读"]]]
     }()
 
     private lazy var head: MineHeaderView = {
@@ -123,8 +120,6 @@ extension SettingTabController: UITableViewDelegate, UITableViewDataSource {
                 }
             case "feedback":
                 break
-            case "about":
-                pushViewController(AboutGuruController())
             default:
                 break
         }
