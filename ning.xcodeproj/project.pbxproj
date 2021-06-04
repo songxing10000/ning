@@ -1185,14 +1185,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
-				DEVELOPMENT_TEAM = SN6Y6ZUY85;
+				DEVELOPMENT_TEAM = U6297RV9B2;
 				INFOPLIST_FILE = ning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurureader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxietong.hshsxy.test1;
 				PRODUCT_NAME = GuruReader;
 				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT/ning-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1207,14 +1207,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.0;
-				DEVELOPMENT_TEAM = SN6Y6ZUY85;
+				DEVELOPMENT_TEAM = U6297RV9B2;
 				INFOPLIST_FILE = ning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurureader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxietong.hshsxy.test1;
 				PRODUCT_NAME = GuruReader;
 				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT/ning-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
