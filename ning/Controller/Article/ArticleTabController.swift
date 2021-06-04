@@ -62,31 +62,5 @@ class ArticleTabController: BasePageController {
             return 0
         }
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        checkAgreement()
-    }
-}
-
-
-extension ArticleTabController {
-    
-    func checkAgreement() {
-        if PreferenceManager.isShowAgreement() {
-            return
-        }
-        showAgreement()
-    }
-    
-    func showAgreement() {
-        let controller = AgreementDialog()
-        self.presentDialogViewController(controller, animationPattern: .fadeInOut, completion: { () -> Void in })
-        NotificationCenter.default.addObserver(self,selector: #selector(self.closeAgreementView),name:NSNotification.Name("closeAgreementView"),object: nil)
-    }
-    
-    @objc func closeAgreementView() {
-        self.dismissDialogViewController(.fadeInOut)
-    }
 }
 

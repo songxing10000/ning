@@ -105,9 +105,7 @@
 		DA789D49250280BA00CB27CE /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA789D48250280BA00CB27CE /* BaseApi.swift */; };
 		DA789D4F2502945B00CB27CE /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA789D4E2502945B00CB27CE /* ArticleViewCell.swift */; };
 		DA789D512502947900CB27CE /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA789D502502947900CB27CE /* BaseTableViewCell.swift */; };
-		DA7B4028251B66D70059B404 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B4027251B66D70059B404 /* AgreementView.swift */; };
 		DA7B402A251B6E4C0059B404 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B4029251B6E4C0059B404 /* UITextView.swift */; };
-		DA7B402E251B7D710059B404 /* AgreementDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B402D251B7D710059B404 /* AgreementDialog.swift */; };
 		DA7B4030251B9D660059B404 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B402F251B9D660059B404 /* PreferenceManager.swift */; };
 		DA7B4032251C4B4C0059B404 /* SignupApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B4031251C4B4C0059B404 /* SignupApi.swift */; };
 		DA7B4034251C4CEE0059B404 /* NingColdTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B4033251C4CEE0059B404 /* NingColdTopicController.swift */; };
@@ -267,9 +265,7 @@
 		DA789D48250280BA00CB27CE /* BaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
 		DA789D4E2502945B00CB27CE /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		DA789D502502947900CB27CE /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		DA7B4027251B66D70059B404 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		DA7B4029251B6E4C0059B404 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
-		DA7B402D251B7D710059B404 /* AgreementDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementDialog.swift; sourceTree = "<group>"; };
 		DA7B402F251B9D660059B404 /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		DA7B4031251C4B4C0059B404 /* SignupApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupApi.swift; sourceTree = "<group>"; };
 		DA7B4033251C4CEE0059B404 /* NingColdTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NingColdTopicController.swift; sourceTree = "<group>"; };
@@ -429,7 +425,6 @@
 			children = (
 				DA8D0103251645AF000D55F4 /* NingWebController.swift */,
 				DA2F85492518628500035C83 /* ControllerUtils.swift */,
-				DA7B402D251B7D710059B404 /* AgreementDialog.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -485,7 +480,6 @@
 			isa = PBXGroup;
 			children = (
 				DA4D70E3250496C300F9F477 /* MineHeaderView.swift */,
-				DA7B4027251B66D70059B404 /* AgreementView.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -909,7 +903,6 @@
 				8E211130256AA15900CC9FC9 /* NingOrder.swift in Sources */,
 				DA4D700B25039DF200F9F477 /* UEmptyDataSet.swift in Sources */,
 				DA95535B250FC22B0025AC63 /* UserPasswordController.swift in Sources */,
-				DA7B4028251B66D70059B404 /* AgreementView.swift in Sources */,
 				DA2F3FF72510E3F00074E233 /* NingManageGroupSourceController.swift in Sources */,
 				DA789D0824FE8DD700CB27CE /* ArrayExtensions.swift in Sources */,
 				DA789D452502780300CB27CE /* Article.swift in Sources */,
@@ -972,7 +965,6 @@
 				DA4D701025039DF200F9F477 /* UHairPowder.swift in Sources */,
 				DA8D00FE2514F44F000D55F4 /* NingTuikanArticleListController.swift in Sources */,
 				DA7B403C251CDE2A0059B404 /* BaseCollectionReusableView.swift in Sources */,
-				DA7B402E251B7D710059B404 /* AgreementDialog.swift in Sources */,
 				DA789D3A25013CEB00CB27CE /* SiteHomeController.swift in Sources */,
 				DA955349250DE98E0025AC63 /* BaseListController.swift in Sources */,
 				DA8D0116251777D5000D55F4 /* DiscoveryTopicController.swift in Sources */,
