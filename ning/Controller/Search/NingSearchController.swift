@@ -21,6 +21,7 @@ class NingSearchController: NingArticleListController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildSearchBar()
+        tableView.keyboardDismissMode = .onDrag
     }
     
     func buildSearchBar() {
