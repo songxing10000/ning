@@ -36,6 +36,8 @@ pod 'ALCameraViewController'
 pod 'LSDialogViewController', '~> 4.0'
 pod "DynamicBlurView"
 pod 'SwiftyStoreKit'
+
 pod 'LookinServer'
+pod 'SKPhotoBrowser'
 end
 

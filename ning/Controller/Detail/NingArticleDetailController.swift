@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 import DropDown
-
+import SKPhotoBrowser
 class NingArticleDetailController: BaseViewController {
     
     var article: Article?
@@ -19,13 +19,12 @@ class NingArticleDetailController: BaseViewController {
     var articleWrapper: ArticleWrapper?
     
     var handler: ArticleDetailOpHandler?
-
-    lazy var webView: WKWebView = {
+    private var imgUrlStrs = [String]()
+    private var photos = [SKPhoto]()
+    private var webView: WKWebView = {
         let webView = WKWebView()
         webView.allowsBackForwardNavigationGestures = false
         webView.isMultipleTouchEnabled = false
-        webView.navigationDelegate = self
-        webView.uiDelegate = self
         return webView
     }()
     
@@ -45,6 +44,8 @@ class NingArticleDetailController: BaseViewController {
     
     override func setupLayout() {
         view.addSubview(webView)
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
         webView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
         
         view.addSubview(progressView)
@@ -124,6 +125,20 @@ class NingArticleDetailController: BaseViewController {
 }
 
 extension NingArticleDetailController: WKNavigationDelegate, WKUIDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        let requestString = navigationAction.request.url?.absoluteString
+        print(requestString!)
+        if  (requestString?.hasPrefix("image-preview"))!{
+            let imgUrl = NSString.init(string: requestString!).substring(from: "image-preview:".count )
+            let index = imgUrlStrs.indexes(of: imgUrl)
+            let browser = SKPhotoBrowser(photos: photos)
+            if let fObj = index.first {
+                browser.initializePageIndex(fObj)
+                present(browser, animated: true, completion: {})
+            }
+        }
+        decisionHandler(.allow)  //一定要加上这句话
+    }
     
     override func observeValue(forKeyPath keyPath: String?,
                                of object: Any?,
@@ -139,6 +154,42 @@ extension NingArticleDetailController: WKNavigationDelegate, WKUIDelegate {
         
         progressView.setProgress(0.0, animated: false)
         navigationItem.title = title ?? (webView.title ?? webView.url?.host)
+        
+        let jsGetImages =
+            "function getImages(){" +
+            "var objs = document.getElementsByTagName(\"img\");" +
+            "var imgScr = '';" +
+            "for(var i=0;i<objs.length;i++){" +
+            "imgScr = imgScr + objs[i].src + '+';" +
+            "};" +
+            "return imgScr;" +
+            "};"
+
+        webView.evaluateJavaScript(jsGetImages, completionHandler: nil)
+        webView.evaluateJavaScript("getImages()") { (data, err) in
+            let imageUrl:String = data as! String
+            var urlArry = imageUrl.components(separatedBy: "+")
+            urlArry.removeLast()
+            self.imgUrlStrs.append(contentsOf: urlArry)
+            for urlStr in self.imgUrlStrs{
+                let photo = SKPhoto.photoWithImageURL(urlStr)
+                photo.shouldCachePhotoURLImage = false // you can use image cache by true(NSCache)
+                self.photos.append(photo)
+            }
+        }
+        var jsClickImage:String
+        jsClickImage =
+            "function registerImageClickAction(){" +
+            "var imgs=document.getElementsByTagName('img');" +
+            "var length=imgs.length;" +
+            "for(var i=0;i<length;i++){" +
+            "img=imgs[i];" +
+            "img.onclick=function(){" +
+            "window.location.href='image-preview:'+this.src}" +
+            "}" +
+            "}"
+        webView.evaluateJavaScript(jsClickImage, completionHandler: nil)
+        webView.evaluateJavaScript("registerImageClickAction()", completionHandler: nil)
     }
 }
 

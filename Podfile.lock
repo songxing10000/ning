@@ -26,6 +26,7 @@ PODS:
     - Reusable/View (= 4.1.1)
   - Reusable/Storyboard (4.1.1)
   - Reusable/View (4.1.1)
+  - SKPhotoBrowser (6.1.0)
   - SnapKit (4.2.0)
   - SnapKitExtend (1.1.0):
     - SnapKit
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - Moya (= 13.0.1)
   - PMAlertController
   - Reusable
+  - SKPhotoBrowser
   - SnapKit (= 4.2.0)
   - SnapKitExtend
   - SQLite.swift
@@ -87,6 +89,7 @@ SPEC REPOS:
     - PMAlertController
     - Result
     - Reusable
+    - SKPhotoBrowser
     - SnapKit
     - SnapKitExtend
     - SQLite.swift
@@ -116,6 +119,7 @@ SPEC CHECKSUMS:
   PMAlertController: ab5fcf4d085b7878c9451466d701449c4bf6efb8
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+  SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SnapKitExtend: aa30cf37196195fae9c4354686cc7710184ebfcc
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
@@ -125,6 +129,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: b6cfa1c141c6b9e08897df7c26a08a32c29f7ac1
+PODFILE CHECKSUM: bcb35c9496bb9d2da6491e0f44cf7b321574bf13
 
 COCOAPODS: 1.10.1
