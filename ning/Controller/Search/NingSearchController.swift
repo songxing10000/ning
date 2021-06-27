@@ -31,7 +31,8 @@ class NingSearchController: NingArticleListController {
         searchBar.backgroundColor = UIColor.theme
         searchBar.tintColor = UIColor.white
         searchBar.delegate = self
-        searchBar.placeholder = "收入关键词搜索文章标题"
+        searchBar.placeholder = "输入关键词搜索文章标题"
+        
         self.navigationItem.titleView = searchBar
         self.searchBar = searchBar
         searchBar.resignFirstResponder()
