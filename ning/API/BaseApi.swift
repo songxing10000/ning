@@ -47,7 +47,7 @@ class DefaultAlamofireManager: Alamofire.SessionManager {
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         configuration.timeoutIntervalForRequest = 10 // as seconds, you can set your request timeout
         configuration.timeoutIntervalForResource = 20 // as seconds, you can set your resource timeout
-        configuration.requestCachePolicy = .useProtocolCachePolicy
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
         return DefaultAlamofireManager(configuration: configuration)
     }()
 }
