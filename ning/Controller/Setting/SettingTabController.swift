@@ -10,12 +10,15 @@ import UIKit
 
 class SettingTabController: BaseViewController {
     
-    private lazy var sectionArray: Array = {
-        return [[["name":"fav", "title": "我的收藏"],
-                 ["name":"late", "title": "我的待读"]]]
+    private var sectionArray: Array = {
+        return [[
+            ["name":"fav", "title": "我的收藏"],
+            ["name":"late", "title": "我的待读"],
+            ["name":"openDoor", "title": "开门"]
+        ]]
     }()
 
-    private lazy var head: MineHeaderView = {
+    private var head: MineHeaderView = {
         return MineHeaderView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 250))
     }()
     
@@ -118,7 +121,9 @@ extension SettingTabController: UITableViewDelegate, UITableViewDataSource {
                 } else {
                     showLoginToast()
                 }
-            case "feedback":
+            case "openDoor":
+                    print("d")
+                
                 break
             default:
                 break
