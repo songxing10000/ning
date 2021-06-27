@@ -78,12 +78,8 @@ func logError(_ message: Any?, file: String = #file, function: String = #functio
 //MARK: SnapKit
 extension ConstraintView {
     
-    var usnp: ConstraintBasicAttributesDSL {
-        if #available(iOS 11.0, *) {
-            return self.safeAreaLayoutGuide.snp
-        } else {
-            return self.snp
-        }
+    var usnp: ConstraintBasicAttributesDSL {    
+        return self.safeAreaLayoutGuide.snp
     }
 }
 

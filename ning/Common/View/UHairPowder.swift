@@ -63,7 +63,6 @@ open class UHairPowder {
     public func spread() {
         guard isIphoneX else { return }
         guard let window = UIApplication.shared.keyWindow else { return }
-        if #available(iOS 11.0, *) {
             if window.safeAreaInsets.top > 0.0 {
                 DispatchQueue.main.async { [weak self] in
                     self?.statusWindow.makeKeyAndVisible()
@@ -72,6 +71,6 @@ open class UHairPowder {
                     }
                 }
             }
-        }
+        
     }
 }
