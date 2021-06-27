@@ -23,14 +23,7 @@ class UserLoginController: BaseViewController {
         super.viewDidLoad()
         self.title = "登录"
         loginView.submitView.addTarget(self, action: #selector(clickLoginEmail), for: .touchUpInside)
-//        loginView.weixinView.addTarget(self, action: #selector(clickLoginWeixin), for: .touchUpInside)
-        buildTopBarRightImageBtn("nav_new_user")
     }
-    
-    @objc override func onClickTopBarRightBtn() {
-        pushViewController(NewUserController())
-    }
-
     @objc private func clickLoginEmail() {
         let email = NingUtils.trim(loginView.emailView.text)
         let password = NingUtils.trim(loginView.passwordView.text)

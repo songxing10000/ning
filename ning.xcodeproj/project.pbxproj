@@ -34,8 +34,6 @@
 		DA11EBAD255561A8003B8758 /* EmptyKeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EBAC255561A8003B8758 /* EmptyKeywordView.swift */; };
 		DA11EBB025556871003B8758 /* KeywordApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EBAF25556871003B8758 /* KeywordApi.swift */; };
 		DA11EBB3255631EE003B8758 /* KeywordArticleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EBB2255631EE003B8758 /* KeywordArticleListController.swift */; };
-		DA2A3E2F2531B9EB0047F726 /* NewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A3E2E2531B9EB0047F726 /* NewUserController.swift */; };
-		DA2A3E322531BA330047F726 /* NewUserFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A3E312531BA330047F726 /* NewUserFormView.swift */; };
 		DA2A3E38253200340047F726 /* ArticleReadDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A3E37253200340047F726 /* ArticleReadDAO.swift */; };
 		DA2A3E3B253203D20047F726 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A3E3A253203D20047F726 /* DateExtensions.swift */; };
 		DA2C329E24FE469F00F66229 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C329D24FE469F00F66229 /* AppDelegate.swift */; };
@@ -191,8 +189,6 @@
 		DA11EBAC255561A8003B8758 /* EmptyKeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyKeywordView.swift; sourceTree = "<group>"; };
 		DA11EBAF25556871003B8758 /* KeywordApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordApi.swift; sourceTree = "<group>"; };
 		DA11EBB2255631EE003B8758 /* KeywordArticleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordArticleListController.swift; sourceTree = "<group>"; };
-		DA2A3E2E2531B9EB0047F726 /* NewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserController.swift; sourceTree = "<group>"; };
-		DA2A3E312531BA330047F726 /* NewUserFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserFormView.swift; sourceTree = "<group>"; };
 		DA2A3E37253200340047F726 /* ArticleReadDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleReadDAO.swift; sourceTree = "<group>"; };
 		DA2A3E3A253203D20047F726 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		DA2C329A24FE469F00F66229 /* GuruReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -492,7 +488,6 @@
 				DA7DCFBC25066A2D00FB4B15 /* UserFieldView.swift */,
 				DA2F3FE8251065920074E233 /* UserNameView.swift */,
 				DA2F3FEA251068090074E233 /* UserPasswordView.swift */,
-				DA2A3E312531BA330047F726 /* NewUserFormView.swift */,
 				8E5630B925402E6800717259 /* UserEmailView.swift */,
 				8E1AD414255FA882007CE01C /* MemberView.swift */,
 				8E1AD4182561200A007CE01C /* MemberPayView.swift */,
@@ -586,7 +581,6 @@
 				DA7B4033251C4CEE0059B404 /* NingColdTopicController.swift */,
 				DA7B4035251C4D0C0059B404 /* ColdBaseController.swift */,
 				DA7B403D251CE6070059B404 /* NingColdSiteController.swift */,
-				DA2A3E2E2531B9EB0047F726 /* NewUserController.swift */,
 				8E5630B625402E2C00717259 /* UserEmailController.swift */,
 			);
 			path = User;
@@ -978,7 +972,6 @@
 				DA7B403E251CE6070059B404 /* NingColdSiteController.swift in Sources */,
 				DA2A3E3B253203D20047F726 /* DateExtensions.swift in Sources */,
 				DA7B4030251B9D660059B404 /* PreferenceManager.swift in Sources */,
-				DA2A3E2F2531B9EB0047F726 /* NewUserController.swift in Sources */,
 				DA2F3FF52510E3D50074E233 /* ManageGroupController.swift in Sources */,
 				DA789D512502947900CB27CE /* BaseTableViewCell.swift in Sources */,
 				DA7B4032251C4B4C0059B404 /* SignupApi.swift in Sources */,
@@ -1003,7 +996,6 @@
 				DA789D3225012E5400CB27CE /* BasePageController.swift in Sources */,
 				DA789CE924FE703C00CB27CE /* HomeTabController.swift in Sources */,
 				DA7B4038251C50050059B404 /* NingColdSourceCell.swift in Sources */,
-				DA2A3E322531BA330047F726 /* NewUserFormView.swift in Sources */,
 				DA789D0E24FE8DD700CB27CE /* DictionaryExtension.swift in Sources */,
 				DA7DCFBB25066A0B00FB4B15 /* UserProfileView.swift in Sources */,
 				DA8D0100251506B3000D55F4 /* ManageTuikanController.swift in Sources */,
