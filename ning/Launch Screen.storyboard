@@ -19,16 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guru_start.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgf-RR-DhZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLan.png" translatesAutoresizingMaskIntoConstraints="NO" id="jEK-zc-mdy">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rgf-RR-DhZ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="GZ4-xY-pPP"/>
-                            <constraint firstAttribute="bottom" secondItem="rgf-RR-DhZ" secondAttribute="bottom" id="W44-lV-t6I"/>
-                            <constraint firstItem="rgf-RR-DhZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="XzO-7b-qRw"/>
-                            <constraint firstAttribute="trailing" secondItem="rgf-RR-DhZ" secondAttribute="trailing" id="wAV-W4-pUj"/>
+                            <constraint firstItem="jEK-zc-mdy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eVk-hh-LtG"/>
+                            <constraint firstItem="jEK-zc-mdy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yVf-bW-H31"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="guru_start.png" width="259.20001220703125" height="460.79998779296875"/>
+        <image name="iconLan.png" width="60" height="60"/>
     </resources>
 </document>

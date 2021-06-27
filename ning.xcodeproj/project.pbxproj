@@ -23,6 +23,8 @@
 		8E919DA12535616D00E34D28 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DA02535616D00E34D28 /* KingfisherExtension.swift */; };
 		8E919DC325357AF400E34D28 /* OauthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DC225357AF400E34D28 /* OauthInfo.swift */; };
 		8E919DC72535F06500E34D28 /* UploadApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DC62535F06500E34D28 /* UploadApi.swift */; };
+		985BE5242688CD5300D4B809 /* iconLan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985BE5222688CD5300D4B809 /* iconLan@2x.png */; };
+		985BE5252688CD5300D4B809 /* iconLan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985BE5232688CD5300D4B809 /* iconLan@3x.png */; };
 		98F0D95C26295F33003BB127 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F0D95B26295F33003BB127 /* Launch Screen.storyboard */; };
 		DA0C169B25088F8F0000DF1E /* ArticleDetailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C169A25088F8F0000DF1E /* ArticleDetailHelper.swift */; };
 		DA0C169D2508C6470000DF1E /* ArticleDetailOpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C169C2508C6470000DF1E /* ArticleDetailOpHandler.swift */; };
@@ -126,7 +128,6 @@
 		DA8D0100251506B3000D55F4 /* ManageTuikanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D00FF251506B3000D55F4 /* ManageTuikanController.swift */; };
 		DA8D01022515AC6F000D55F4 /* ManageTuikanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D01012515AC6F000D55F4 /* ManageTuikanView.swift */; };
 		DA8D0104251645AF000D55F4 /* NingWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D0103251645AF000D55F4 /* NingWebController.swift */; };
-		DA8D010A251769BA000D55F4 /* guru_start.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8D0109251769BA000D55F4 /* guru_start.png */; };
 		DA8D01122517775E000D55F4 /* DiscoverySourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D01112517775E000D55F4 /* DiscoverySourceController.swift */; };
 		DA8D0114251777C2000D55F4 /* DiscoverySiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D0113251777C2000D55F4 /* DiscoverySiteController.swift */; };
 		DA8D0116251777D5000D55F4 /* DiscoveryTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D0115251777D5000D55F4 /* DiscoveryTopicController.swift */; };
@@ -176,6 +177,8 @@
 		8E919DA02535616D00E34D28 /* KingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		8E919DC225357AF400E34D28 /* OauthInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthInfo.swift; sourceTree = "<group>"; };
 		8E919DC62535F06500E34D28 /* UploadApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadApi.swift; sourceTree = "<group>"; };
+		985BE5222688CD5300D4B809 /* iconLan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconLan@2x.png"; sourceTree = "<group>"; };
+		985BE5232688CD5300D4B809 /* iconLan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconLan@3x.png"; sourceTree = "<group>"; };
 		98F0D95B26295F33003BB127 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B18DB2E9725BC2FED1413BD1 /* Pods-ning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ning.release.xcconfig"; path = "Target Support Files/Pods-ning/Pods-ning.release.xcconfig"; sourceTree = "<group>"; };
 		BFE20B0CAFE53B3F05BAF724 /* Pods_ning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,7 +287,6 @@
 		DA8D00FF251506B3000D55F4 /* ManageTuikanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTuikanController.swift; sourceTree = "<group>"; };
 		DA8D01012515AC6F000D55F4 /* ManageTuikanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTuikanView.swift; sourceTree = "<group>"; };
 		DA8D0103251645AF000D55F4 /* NingWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NingWebController.swift; sourceTree = "<group>"; };
-		DA8D0109251769BA000D55F4 /* guru_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guru_start.png; sourceTree = "<group>"; };
 		DA8D01112517775E000D55F4 /* DiscoverySourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySourceController.swift; sourceTree = "<group>"; };
 		DA8D0113251777C2000D55F4 /* DiscoverySiteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySiteController.swift; sourceTree = "<group>"; };
 		DA8D0115251777D5000D55F4 /* DiscoveryTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTopicController.swift; sourceTree = "<group>"; };
@@ -454,10 +456,11 @@
 		DA4D70162503CE1700F9F477 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				985BE5222688CD5300D4B809 /* iconLan@2x.png */,
+				985BE5232688CD5300D4B809 /* iconLan@3x.png */,
 				8E2110FF256A832D00CC9FC9 /* abs_image_no.png */,
 				8E1AD41B2561738B007CE01C /* member.png */,
 				8E211108256A836900CC9FC9 /* abs_image.png */,
-				DA8D0109251769BA000D55F4 /* guru_start.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -835,11 +838,12 @@
 				8E211100256A832D00CC9FC9 /* abs_image_no.png in Resources */,
 				DA2C32A724FE46A600F66229 /* Assets.xcassets in Resources */,
 				DA2C32A524FE469F00F66229 /* Main.storyboard in Resources */,
+				985BE5242688CD5300D4B809 /* iconLan@2x.png in Resources */,
 				98F0D95C26295F33003BB127 /* Launch Screen.storyboard in Resources */,
 				8E1AD41C2561738B007CE01C /* member.png in Resources */,
+				985BE5252688CD5300D4B809 /* iconLan@3x.png in Resources */,
 				DA4D707A2503CE1800F9F477 /* member.html in Resources */,
 				DA4D70DB2503CE1800F9F477 /* default.css in Resources */,
-				DA8D010A251769BA000D55F4 /* guru_start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
