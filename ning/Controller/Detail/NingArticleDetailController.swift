@@ -173,7 +173,7 @@ extension NingArticleDetailController: WKNavigationDelegate, WKUIDelegate {
             self.imgUrlStrs.append(contentsOf: urlArry)
             for urlStr in self.imgUrlStrs{
                 let photo = SKPhoto.photoWithImageURL(urlStr)
-                photo.shouldCachePhotoURLImage = false // you can use image cache by true(NSCache)
+                photo.shouldCachePhotoURLImage = true
                 self.photos.append(photo)
             }
         }
