@@ -10,6 +10,7 @@ import Moya
 import HandyJSON
 import MBProgressHUD
 import Alamofire
+import enum Result.Result
 
 let LoadingPlugin = NetworkActivityPlugin { (type, target) in
     guard let vc = topVC else { return }
@@ -77,26 +78,37 @@ extension MoyaProvider {
             guard let completion = completion else { return }
             logInfo(result.value)
             guard let returnData = try? result.value?.mapModel(T.self) else {
-                completion(self.buildErrorResult(result.value))
+                completion(self.buildErrorResult(result))
                 return
             }
             completion(returnData)
         })
     }
     
-    private func buildErrorResult<T: HandyJSON>(_ response: Moya.Response?) -> T {
-        let result1 = T()
-        let result = result1 as! BaseObject
-        result.success = false
-        result.error = "未知错误"
-        if response == nil {
-            return result1
+    private func buildErrorResult<T: HandyJSON>(_ result: Result<Response, MoyaError>?) -> T {
+
+        if let data = result?.value?.data,
+           let jsonString = String(data: data, encoding: .utf8),
+           jsonString.contains("Access denied") {
+            
+            let resultModel = T()
+            if let baseObj = resultModel as? BaseObject {
+            
+                baseObj.success = false
+                baseObj.error = "授权失败，请重新登录"
+                return resultModel
+            }
         }
-        let jsonString = String(data: response!.data, encoding: .utf8)
-        if jsonString!.contains("Access denied") {
-            result.error = "授权失败，请重新登录"
+        
+        
+        let resultModel = T()
+        if let baseObj = resultModel as? BaseObject {
+        
+            baseObj.success = false
+            baseObj.error = result?.error?.localizedDescription
+            return resultModel
         }
-        return result1
+        return resultModel
     }
 }
 
