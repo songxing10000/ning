@@ -25,7 +25,7 @@ enum ArticleApi {
     
 }
 
-extension ArticleApi: TargetType {
+extension ArticleApi: TargetType, CachePolicyGettable {
     var path: String {
         switch self {
             case .hot: return "articles/hot.json"
@@ -78,9 +78,18 @@ extension ArticleApi: TargetType {
         }
         return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
     }
+    var cachePolicy: URLRequest.CachePolicy {
+        switch self {
+        case .detail(let id):
+            return .returnCacheDataElseLoad
+        default:
+            return .useProtocolCachePolicy
+        }
+        return .useProtocolCachePolicy
+    }
 }
 
 
-let ArticleApiProvider = MoyaProvider<ArticleApi>(manager: DefaultAlamofireManager.sharedManager,plugins: [BasicCredentialsPlugin])
-let ArticleApiLoadingProvider = MoyaProvider<ArticleApi>(manager: DefaultAlamofireManager.sharedManager,plugins: [BasicCredentialsPlugin,LoadingPlugin])
+let ArticleApiProvider = MoyaProvider<ArticleApi>(manager: DefaultAlamofireManager.sharedManager,plugins: [BasicCredentialsPlugin, NetworkDataCachingPlugin()])
+let ArticleApiLoadingProvider = MoyaProvider<ArticleApi>(manager: DefaultAlamofireManager.sharedManager,plugins: [BasicCredentialsPlugin,LoadingPlugin, NetworkDataCachingPlugin()])
 

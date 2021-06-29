@@ -23,6 +23,7 @@
 		8E919DA12535616D00E34D28 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DA02535616D00E34D28 /* KingfisherExtension.swift */; };
 		8E919DC325357AF400E34D28 /* OauthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DC225357AF400E34D28 /* OauthInfo.swift */; };
 		8E919DC72535F06500E34D28 /* UploadApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E919DC62535F06500E34D28 /* UploadApi.swift */; };
+		9850F568268B084A00A3AB40 /* NetworkDataCachingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850F567268B084A00A3AB40 /* NetworkDataCachingPlugin.swift */; };
 		985BE5242688CD5300D4B809 /* iconLan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985BE5222688CD5300D4B809 /* iconLan@2x.png */; };
 		985BE5252688CD5300D4B809 /* iconLan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 985BE5232688CD5300D4B809 /* iconLan@3x.png */; };
 		98F0D95C26295F33003BB127 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F0D95B26295F33003BB127 /* Launch Screen.storyboard */; };
@@ -177,6 +178,7 @@
 		8E919DA02535616D00E34D28 /* KingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		8E919DC225357AF400E34D28 /* OauthInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthInfo.swift; sourceTree = "<group>"; };
 		8E919DC62535F06500E34D28 /* UploadApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadApi.swift; sourceTree = "<group>"; };
+		9850F567268B084A00A3AB40 /* NetworkDataCachingPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataCachingPlugin.swift; sourceTree = "<group>"; };
 		985BE5222688CD5300D4B809 /* iconLan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconLan@2x.png"; sourceTree = "<group>"; };
 		985BE5232688CD5300D4B809 /* iconLan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconLan@3x.png"; sourceTree = "<group>"; };
 		98F0D95B26295F33003BB127 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				DA789D4125020C3400CB27CE /* ArticleApi.swift */,
+				9850F567268B084A00A3AB40 /* NetworkDataCachingPlugin.swift */,
 				DA789D48250280BA00CB27CE /* BaseApi.swift */,
 				DA2F3FEC251079730074E233 /* GroupApi.swift */,
 				DA11EBAF25556871003B8758 /* KeywordApi.swift */,
@@ -1005,6 +1008,7 @@
 				DA8D0100251506B3000D55F4 /* ManageTuikanController.swift in Sources */,
 				DA95534F250F1DED0025AC63 /* NingJuheSourceArticleHeader.swift in Sources */,
 				DAAA35372512508A00052857 /* NingGroupCangCell.swift in Sources */,
+				9850F568268B084A00A3AB40 /* NetworkDataCachingPlugin.swift in Sources */,
 				DA789D0C24FE8DD700CB27CE /* UIBarButtonItemExtension.swift in Sources */,
 				DA7B402A251B6E4C0059B404 /* UITextView.swift in Sources */,
 				DA2F3FED251079730074E233 /* GroupApi.swift in Sources */,
