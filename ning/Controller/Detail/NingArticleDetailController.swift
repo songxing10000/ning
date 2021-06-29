@@ -10,6 +10,8 @@ import UIKit
 import WebKit
 import DropDown
 import SKPhotoBrowser
+import Reachability
+
 class NingArticleDetailController: BaseViewController {
     
     var article: Article?
@@ -27,7 +29,7 @@ class NingArticleDetailController: BaseViewController {
         webView.isMultipleTouchEnabled = false
         return webView
     }()
-    
+    private let reachability = try! Reachability()
     lazy var progressView: UIProgressView = {
         let progressView = UIProgressView()
         progressView.trackImage = UIColor.theme.image()
@@ -70,7 +72,10 @@ class NingArticleDetailController: BaseViewController {
             showToast("收藏成功")
         }
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        reachability.stopNotifier()
+    }
     
     @objc override func onClickTopBarRightBtn() {
         var array = ["查看原文"]
@@ -176,6 +181,8 @@ extension NingArticleDetailController: WKNavigationDelegate, WKUIDelegate {
                 photo.shouldCachePhotoURLImage = true
                 self.photos.append(photo)
             }
+            // wifi下自动下载图片
+            self.wiFiAutoDownloadPhoto()
         }
         var jsClickImage:String
         jsClickImage =
@@ -190,6 +197,21 @@ extension NingArticleDetailController: WKNavigationDelegate, WKUIDelegate {
             "}"
         webView.evaluateJavaScript(jsClickImage, completionHandler: nil)
         webView.evaluateJavaScript("registerImageClickAction()", completionHandler: nil)
+    }
+    /// wifi自动下载图片
+    func wiFiAutoDownloadPhoto() {
+        reachability.whenReachable = { reachability in
+            if reachability.connection == .wifi {
+                self.photos.forEach { (photo) in
+                    photo.loadUnderlyingImageAndNotify()
+                }
+            }
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
     }
 }
 

@@ -20,6 +20,7 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - PMAlertController (4.0.1)
+  - ReachabilitySwift (5.0.0)
   - Result (4.1.0)
   - Reusable (4.1.1):
     - Reusable/Storyboard (= 4.1.1)
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - MJRefresh
   - Moya (= 13.0.1)
   - PMAlertController
+  - ReachabilitySwift
   - Reusable
   - SKPhotoBrowser
   - SnapKit (= 4.2.0)
@@ -87,6 +89,7 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - PMAlertController
+    - ReachabilitySwift
     - Result
     - Reusable
     - SKPhotoBrowser
@@ -117,6 +120,7 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   PMAlertController: ab5fcf4d085b7878c9451466d701449c4bf6efb8
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
@@ -129,6 +133,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: bcb35c9496bb9d2da6491e0f44cf7b321574bf13
+PODFILE CHECKSUM: 862b6a8137879f07b5d729636461dbc0a83b53c4
 
 COCOAPODS: 1.10.1

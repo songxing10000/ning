@@ -39,5 +39,6 @@ pod 'SwiftyStoreKit'
 
 pod 'LookinServer'
 pod 'SKPhotoBrowser'
+pod 'ReachabilitySwift'
 end
 
