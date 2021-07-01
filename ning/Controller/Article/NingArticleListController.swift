@@ -135,7 +135,7 @@ extension NingArticleListController : UITableViewDelegate, UITableViewDataSource
     }
     // MARK: - 长按取消待读
     @objc func cellLongPress(_ recognizer:UIGestureRecognizer) {
-        guard self.title == "我的待读" else {
+        guard self.title == "我的待读" || self.title == "我的收藏" else {
             return
         }
         guard recognizer.state == .began  else {
@@ -153,13 +153,40 @@ extension NingArticleListController : UITableViewDelegate, UITableViewDataSource
         
         //控制箭头方向
         menuController.arrowDirection = .default;
-        //自定义事件
-        let cancel = UIMenuItem(title: "取消待读", action: #selector(test2))
+        if self.title == "我的待读" {
+            let cancel = UIMenuItem(title: "取消待读", action: #selector(longPressToCancelToRead))
+            menuController.menuItems = [cancel]
+        }
+        else if self.title == "我的收藏" {
+            let collectionItem = UIMenuItem(title: "取消收藏", action: #selector(longPressToCancelCollection))
+            menuController.menuItems = [collectionItem]
+        }
         
-        menuController.menuItems = [cancel]
         menuController.showMenu(from: self.tableView, rect: cell.frame)
     }
-    @objc func test2() {
+    /// 长按取消收藏
+    @objc func longPressToCancelCollection() {
+        guard let idx = _longGestureIndexPath?.row, let article = items[idx] else {
+            return
+        }
+        ArticleApiLoadingProvider.request(ArticleApi.unFav(id: article.id),
+            model: Article.self) { [weak self] (result) in
+            if let rst = result, !rst.isSuccess() {
+                self?.makeToast(result?.error ?? "未知错误")
+            }
+            else if result == nil {
+                self?.makeToast("系统错误")
+            }
+            else {
+                self?.items.remove(at: idx)
+                self?.tableView.deleteRows(at: [IndexPath(row: idx, section: 0)], with: .fade)
+                // 同步全部页面
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "k_cancel_favorite_article_notice"), object: article.id)
+            }
+        }
+    }
+    /// 长按取消待读
+    @objc func longPressToCancelToRead() {
         
         guard let idx = _longGestureIndexPath?.row, let article = items[idx] else {
             return
@@ -175,8 +202,8 @@ extension NingArticleListController : UITableViewDelegate, UITableViewDataSource
                 self?.makeToast("系统错误")
             }
             else {
-                self?.items.remove(at: idx)
-                self?.tableView.deleteRows(at: [IndexPath(row: idx, section: 0)], with: .fade)
+                    self?.items.remove(at: idx)
+                    self?.tableView.deleteRows(at: [IndexPath(row: idx, section: 0)], with: .fade)
             }
             
         }
