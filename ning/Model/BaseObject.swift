@@ -46,7 +46,9 @@ class BaseList<T>: BaseObject {
     func append(_ t: T) {
         items.append(t)
     }
-    
+    func remove(at index: Int) {
+        items.remove(at: index)
+    }
     subscript(index: Int) -> T? {
         get {
             if items.count <= index {
