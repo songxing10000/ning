@@ -74,5 +74,8 @@ class ArticleViewCell: BaseTableViewCell {
             }
         }
     }
-
+    // MARK: - 增加长按功能
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
 }

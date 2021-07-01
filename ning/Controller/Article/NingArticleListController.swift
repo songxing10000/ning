@@ -13,7 +13,7 @@ class NingArticleListController: BaseListController {
     var items: ArticleList = ArticleList()
     var catId: Int = 0
     var listType: NingListType = .Hot
-    
+    private var _longGestureIndexPath: IndexPath?
     convenience init(_ catId: Int, listType: NingListType = .Hot) {
         self.init()
         self.catId = catId
@@ -115,6 +115,8 @@ extension NingArticleListController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: ArticleViewCell.self)
         cell.model = items[indexPath.row]
+        //添加长按手势
+        cell.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(cellLongPress)))
         return cell
     }
     
@@ -130,6 +132,54 @@ extension NingArticleListController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNormalMagnitude
+    }
+    // MARK: - 长按取消待读
+    @objc func cellLongPress(_ recognizer:UIGestureRecognizer) {
+        guard self.title == "我的待读" else {
+            return
+        }
+        guard recognizer.state == .began  else {
+            return
+        }
+        let location = recognizer.location(in: self.tableView)
+        _longGestureIndexPath = self.tableView.indexPathForRow(at: location)
+        guard let cell = recognizer.view as? ArticleViewCell else {
+            return
+        }
+        //这里把cell做为第一响应(cell默认是无法成为responder,需要重写canBecomeFirstResponder方法)
+        cell.becomeFirstResponder()
+        
+        let menuController = UIMenuController.shared
+        
+        //控制箭头方向
+        menuController.arrowDirection = .default;
+        //自定义事件
+        let cancel = UIMenuItem(title: "取消待读", action: #selector(test2))
+        
+        menuController.menuItems = [cancel]
+        menuController.showMenu(from: self.tableView, rect: cell.frame)
+    }
+    @objc func test2() {
+        
+        guard let idx = _longGestureIndexPath?.row, let article = items[idx] else {
+            return
+        }
+        
+        ArticleApiLoadingProvider.request(ArticleApi.cancelLate(id: article.id),
+                                          model: BaseObject.self) { [weak self] (result) in
+            
+            if let rst = result, !rst.isSuccess() {
+                self?.makeToast(result?.error ?? "未知错误")
+            }
+            else if result == nil {
+                self?.makeToast("系统错误")
+            }
+            else {
+                self?.items.remove(at: idx)
+                self?.tableView.deleteRows(at: [IndexPath(row: idx, section: 0)], with: .fade)
+            }
+            
+        }
     }
 }
 
